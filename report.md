@@ -1,155 +1,56 @@
 
 # Daily Report 
 
-@(Ruby)[13/06/2017|Do Hong Quan]
-Ruby is a scripting language.
-Today, I've learnt about some basic ruby concepts about syntax and control flow.
+@(Front-End)[14/06/2017|Do Hong Quan]
+Learn about html form.
 
 ----------
 
 [TOC]
 
-## VARIABLES
-There are 5 kinds of variables in Ruby.
-### Global variables
-- Begin with $. 
-- Uninitialized global variables have the value nil and produce warnings with the -w option.
-- Their scope of activity is throughout all programming.
-Ex:
-```
-$global_variable = 10
-class Class1
-   def print_global
-      puts "Global variable in Class1 is #$global_variable"
-   end
-end
-class Class2
-   def print_global
-      puts "Global variable in Class2 is #$global_variable"
-   end
-end
+## FORM HTML
+### Theory
+- An HTML form contains form elements.
+- Form elements are different types of input elements, like text fields, checkboxes, radio buttons, submit buttons, and more.
+- Syntax: 
+<*form* action ="... " method="post">  
+		form elements    
+<*/form*>
+- The **action** attribute defines the action to be performed when the form is submitted.
+- The **method** attribute specifies the HTTP method (GET or POST) to be used when submitting the form data.
+### Element of Form
+- The Input Element:
+The <*input*> element is the most important form element.
+The <*input*> element can be displayed in several ways, depending on the type attribute.
+- Types of Input Element:
+  <*input type="text"*>     **=>** define a one line text input field.
+  <*input type="radio"*>**=>** define a radio button.
+  <*input type="submit"*>**=>** define a submit button.
 
-class1obj = Class1.new
-class1obj.print_global
-class2obj = Class2.new
-class2obj.print_global
-```
-The result will be : 
-"*Global variable in Class1 is 10*
-*Global variable in Class2 is 10*"
-### Local variables
-- Local variables begin with a lowercase letter or _. 
-- The scope of a local variable ranges from class, module, def, or do to the corresponding end or from a block's opening brace to its close brace {}.
-- Ex:
-```
-local_variable = 'Toi nam ngoai method.'
-def variable_scope
-    puts local_variable = 'Toi nam trong method.'
-end
-variable_scope #Toi nam trong method
-puts local_variable #Toi nam ngoai method
-```
+###Example:
 
-### Instance Variables:
-- Instance variables begin with @. 
-- Uninitialized instance variables have the value nil and produce warnings with the -w option.
-- Their scope is in one object. Although the other object is created from the same class, it isn`t have the value of that variable.
-```
-class Nguoi
-
-  def initialize(ten)
-    @ten = ten
-  end
-
-  def show
-    puts @ten
-  end
-end
-
-first = Nguoi.new('Do')
-first.show Do
-
-second = Nguoi.new('Quan')
-second.show # Quan
-```
-### Class Variables
-- Class variables begin with @@ and must be initialized before they can be used in method definitions.
-- With this kind of variable, the object can use that together, even they also can edit its value.
-- Referencing an uninitialized class variable produces an error. Class variables are shared among descendants of the class or module in which the class variables are defined.
-```
-class Dog
-  def initialize(leg)
-    @@leg = leg
-  end
-
-  def show_leg
-    puts @@leg
-  end
-
-end
-
-first = Dog.new(4)
-first.show_leg # 4
-
-second = Dog.new(10)
-second.show_leg # 10
-
-first.show_leg # 10
-```
-###Constant
-- Constants begin with an uppercase letter.
-- Constants cannot modified. Their value will never change.
-##METHOD
-- The syntax:
-```
-def name_of_function(parameters)
-  command
-end
-```
-- notes: when you are not sure that how many parameter your function have, you can add the * at the beginning of your parameter name.
+Write a **register form** which can input username, password, emails, gender.
 
 ```
-def name_of_function(*parameters)
-  command
-end
+<form action="Register.html" method="post">
+	<div>
+		<label for="name">Username</label>
+		<input type="text" name="user_name" id="name">
+	</div>
+	<div>
+		<label for="password">Password</label>
+		<input type="password" name="pass_word" id="password">
+	</div>
+	<div>
+		<label for="email">Email</label>
+		<input type="email" name="email" id="email">
+	</div>
+	
+	<div>
+		<label for="name">Genders</label>
+		<input type="radio" name="gender" value="male">
+		<input type="radio" name="gender" value="female">
+		<input type="radio" name="gender" value="other">
+	</div>
+</form>
 ```
-
-##LOOP
-5 types of loop.
-###For loop
-Syntax:
-```
-for i in a..b
-	command
-end
-```
-With for loop, we will know how many loop we will have.
-###While loop
-Syntax:
-```
-while(conditions)
-	command
-end
-```
-In contrast with for loop, we won`t know how many loop we will have.
-The program will check your conditions first, if it`s right, the program will continue to run your command in while loop. If it is false, the loop will break.
-###.Times
-
-###Until loop
-Syntax:
-```
-until conditions
-	command
-end
-```
-The same with while loop, but while the condition is true, the program will break.
-###Loop
-Syntax:
-```
-loop
-	command
-	break if conditions
-end
-```
-loop is also a unlimited loop. loop is break when the conditions is true 
-

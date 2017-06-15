@@ -14,14 +14,15 @@ puts fibonacci(4)
 ```
 require 'prime'
 def prime_number?(number)
-        	Prime.prime?(number)
+      Prime.prime?(number)
 end
+
 puts prime_number?(7)
 ```
 *c.*
 ```
 def is_perf(n)
-n == (1...n).select {|i| n % i == 0}.inject(:+)
+    n == (1...n).select {|i| n % i == 0}.inject(:+)
 end
 
 puts is_perf(6)
@@ -31,9 +32,9 @@ puts is_perf(6)
 ```
 def centuryFromYear(year)
     cen=year/100
-    	if year%100==0 then return cen 
+    if year%100==0 then return cen 
     	else cen +1
-    	end
+    end
 end
 
 puts centuryFromYear(150)
@@ -45,7 +46,7 @@ def series_sum(n)
     	if (n<0) then puts "n<0"
     	elsif (n==0) then puts "0=0"
     		else  (0..n).collect { |x| sum += x } 
-end
+        end
 end
 
 print series_sum(78)

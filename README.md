@@ -1,1 +1,1 @@
-# training-ruby-summer-2017
+# training-at-summer-2017

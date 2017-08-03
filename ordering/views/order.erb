@@ -1,0 +1,19 @@
+<div>
+	<h1>ALL ORDER</h1>
+	<ul>
+	<% @orders.each do |order| %>
+		<li class="item"> 
+				<div class="item-block">
+					<b>ORDER WITH ID <%= order['order_id']%> </b> <br>
+					<p>INFORMATION</p>
+					<div>
+						<p>Order by user id = <i><%= order['user_id']%> </i> </p>
+						<p> Username: <b><%=order['username']%></b></p>
+						<p> Full name: <b><%=order['firstname']%> <%=order['lastname']%></b></p>
+						<p style="padding-left: 50px">LIST OF BOOKS:<br><%= order['quantity']%>   <%= order['name']%> by <i><%= order['author']%></i> </p>
+					</div>
+				</div>
+		</li>
+		<% end %>
+	 </ul>
+</div>	

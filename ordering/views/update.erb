@@ -1,0 +1,33 @@
+<div class="col-md-4">
+  <form action="/books/edit/" method="POST">
+    <fieldset class="scheluder-border">
+      <legend class="scheluder-border">Edit user</legend>
+      <div class="form-group">
+        <label for="" class="control-label">ID</label>
+        <input class="form-control" type="text" name="id" value="<%= @books['id'] %>" readonly/>
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label">name</label>
+        <input class="form-control" type="text" placeholder="name" name="name" required value="<%= @books['name'] %>"
+        />
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label"  >Description</label>
+        <input class="form-control" type="text" placeholder="description" name="description" required value="<%= @books['description'] %>"
+        />
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label">Author</label>
+        <input class="form-control" type="text" placeholder="Author" name="author" required value="<%= @books['author'] %>"
+        />
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label" >Images</label>
+        <input class="form-control" type="text" name="image" required value="<%= @books['image'] %>"
+        />
+      </div>
+      <input type='hidden' name='_method' value='PUT'>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </fieldset>
+  </form>
+</div>

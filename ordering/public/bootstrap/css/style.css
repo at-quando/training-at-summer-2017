@@ -1,0 +1,178 @@
+.image-size{
+	width:30px;
+	height:30px;
+}
+.table-border{
+border: 0.5px solid grey;
+	}
+.item-border{
+	border-right: 0.5px solid grey;
+}
+.no-boder{
+	border: none;
+}
+.setRedcolor{
+	background: red;
+	}
+	.fit-image{
+	width:20px;
+	}
+	.fit-author{
+	width:150px;
+	}
+.position-label{
+	position:relative;
+}
+.padding-page{
+	padding-bottom: 100px;
+}
+
+.customHr {
+	  margin-top: 10px;
+    width: 95%
+    font-size: 1px;
+    color: rgba(0, 0, 0, 0);
+    line-height: 1px;
+    
+    background-color: grey;
+    margin-bottom: 10px;
+}
+.custom-header{
+	position: relative;
+	width:100%;
+}
+.header-banner{
+	width:100%;
+	}
+.custom-text-header{
+	position: absolute;
+	top: 45%;
+	transform: translateY(-50%);
+	left:20px;
+	color: #F5F5DC;
+	font-family: sans-serif;
+	}
+
+.custom-text-header .main-text{
+	font-size: 80px;
+	font-weight: 200;
+	opacity: 0.5;
+	}
+.custom-text-header .info-text{
+	}
+.item{
+	border: 0.5px solid grey;
+	float:left;
+	width: 80%;
+	height: 250px;
+	list-style-type: none;
+	margin-bottom: 20px;
+	position: relative;
+	overflow: scroll;
+}
+.item-title{
+text-transform: uppercase;
+font-size: 30px;
+	}
+.item-block{
+	padding-left: 20px;
+	float:left;
+	width:80%;
+	height: 100%;
+	}
+.item-descrip{
+	height: 100%;
+	overflow: hidden;
+}
+.item-image{
+	width: 100%;
+	height: 80%;
+	text-align: center;
+	padding-top: 4%;
+	}
+.cart-logo{
+	padding: 5px 5px;
+	background: #F5F5DC;
+	height: 40px;
+	width:auto;
+	right: 0;
+	bottom:0;
+	position: absolute;
+}
+.image-box{
+	width:20%;
+	height: 100%;
+	float:left;
+	border-right: 2px groove grey;
+	overflow: hidden;
+	}
+.custom-task{
+	width: 15%;
+}
+.textbox-description{
+	width: 50%;
+	height: 200px;
+
+}
+.fit-textdescription{
+	height: 10px;
+	overflow: scroll;
+}
+/*view*/
+.image-part
+{
+	float:left;
+	width:30%;
+
+}
+.image-custom{
+	width:100%;
+	height: auto;
+}
+.remaining-part
+{
+	padding-left: 20px;
+	float:right;
+	width:70%;
+}
+.price-custom{
+	padding-top: 10px;
+	font-size: 200%;
+	color: red;
+	text-align: center;
+}
+.remaining-info-part{
+}
+.remaining-cart-part{
+	padding-top:20px;
+	border-top: 0.5px groove grey;
+	}
+.cart-left-part{
+	float:left;
+}
+.cart-right-part{
+	float:right;
+	width:30%;
+	}
+	/*footer*/
+.footer{
+margin-top: 100px;
+background: black;
+height: 200px;
+}
+.text-footer{
+	text-align: center;
+	color: white;
+	font-weight: 500;
+	padding:20px;
+}
+.remaining-info-part::after {
+		content: "";
+    display: block;
+    clear: both;
+	}
+.custom-form-cart{
+	display: none;
+	float:right;
+	}
+

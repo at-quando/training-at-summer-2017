@@ -1,0 +1,20 @@
+<div>
+	<h1>ALL BOOKS</h1>
+	<ul>
+	<% @books.each do |books| %>
+		<li class="item"> 
+			<a href='/books/view/<%= books['id']%>'>
+				<div class="image-box">
+					<img class="item-image" src="<%= books['image']%> ">
+				</div>
+				<div class="item-block">
+					<b class="item-title"><%= books['name']%> </b>
+					<i><%= books['author']%> </i>
+					<p class="item-descrip"><%= books['description']%> </p>
+					<img class="cart-logo" src="images/cart.png">
+				</div>
+			</a>
+		</li>
+		<% end %>
+	 </ul>
+</div>

@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>File Upload</title>
+    </head>
+    <body class="padding-page">
+        <form action="/new" method="POST" enctype="multipart/form-data" onchange="checkFormBlank()">
+        <h1>FILL THE INFORMATION OF YOUR BOOK</h1>
+        <p>The * is compulsory</p>
+        <div>
+            <label>Id of book *</label><br>
+            <input type="text" name="id" id="text1" class="position-label" onblur="checkTextField(this);">
+            <label id="1"></label>
+        </div>
+        <div>
+            <label>Name of book *</label><br>
+            <input type="text" name="name" class="position-label" onblur="checkTextField(this);">
+            <label id="2"></label>
+        </div>
+        <div>
+            <label>Description *</label><br>
+            <input type="text" name="description" class="textbox-description" onblur="checkTextField(this);" >
+            <label id="3"></label>
+        </div>
+        <div>
+            <label>Author *</label><br>
+            <input type="text" name="author" onblur="checkTextField(this);">
+            <label id="4"></label>
+        </div>
+        <div>
+            <label>Add the cover of book (optional)</label><br>
+            <input type="file" name="file" accept=".jpg, .jpeg, .png" title="Choose a video please"><br>
+            <button type="submit" id="submitnewbook" value="Upload Book" >UPLOAD</button>
+        </div>
+        </form>
+    </body>
+</html>
+<script type="text/javascript">
+var $sum = 0;
+    function checkTextField(field) {
+        $nextID = $(field).next().attr('id');
+        var buttonTag= document.getElementById("submitnewbook"); 
+        var labelTag= document.getElementById($nextID);
+        if (field.value == '') {
+            labelTag.innerHTML = 'This field cannot be empty'; 
+            labelTag.style.color="red"; 
+            buttonTag.disabled =true;
+        }else
+        {
+            labelTag.innerHTML = 'Correct';  
+            labelTag.style.color="green"; 
+        }
+    }
+     function checkFormBlank(){
+        var buttonTag= document.getElementById("submitnewbook"); 
+        for(var i=1;i<5;i++)
+        {
+            var labelTag= document.getElementById(i);
+            if(labelTag.style.color=="green") $sum++;
+        }
+        if($sum >3) buttonTag.disabled =false;
+    }
+</script>

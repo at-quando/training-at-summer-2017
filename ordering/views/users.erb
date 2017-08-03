@@ -1,0 +1,21 @@
+<table>
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			<th>username</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @users.each do |users| %>
+		<tr>
+			<td><%= users['id'] %></td>
+			<td><%= users['firstname'] %></td>
+			<td><%= users['lastname'] %></td>
+			<td><%= users['password'] %></td>
+			<td> </td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

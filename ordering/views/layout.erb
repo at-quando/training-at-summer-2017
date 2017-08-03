@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    <%= @page_title %>
+  </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="<%= url("bootstrap/css/bootstrap.min.css") %>" rel="stylesheet">
+  <link href="<%= url("bootstrap/css/style.css") %>" rel="stylesheet">
+</head>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="/home" class="navbar-brand">Order Managerment</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/new">Add new books</a></li>
+        <li class="active"><a href="/books">Books Management</a></li>
+        <li class="active"><a href="/order">Order Management</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<body>
+  <div class="custom-header">
+    <div class="custom-text-header">
+      <h1 class="main-text">BOOKS & ORDERING!</h1>
+      <p class="info-text">This website can help you order book easily.Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+    </div> 
+    <img src="/images/header.jpg" class="header-banner" "/>
+  </div>
+  <div class="container" style="margin-top: 60px;">
+    <div class="row">
+      <%= yield %>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="<%= url("bootstrap/js/bootstrap.min.js") %>"></script>
+  <footer class="footer">
+      <div class="text-footer">
+        <h1 style="font-size: 20px;" >Made by DHQ</h1> 
+      </div>       
+  </footer>
+</body>
+
+</html>

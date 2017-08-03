@@ -1,0 +1,9 @@
+<h1>PasswordResets</h1>
+<%= simple_form_for @user, method: :patch, url: password_reset_path do |f| %>
+	<label>Your new Password:</label>
+	<%= f.password_field :password, class: "form-control" %>
+	<label>Your Password Confirmation:</label>
+	<%= f.password_field :password_confirmation, class: "form-control" %>
+	<%= f.submit "Reset Password" %>
+<% end %>
+

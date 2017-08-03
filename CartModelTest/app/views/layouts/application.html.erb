@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title>CartModelTest</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body class="body-custom">
+  	<div class="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: [:alert, alert_for(name)] %>
+      <% end %>
+    </div>
+    <div class="container">
+      <% if logged_in? ==true %>
+        <div class="col-md-3 left_col" style="background-color: #2A3F54; height: 1200px;">
+          <%= render 'layouts/navbar' %> 
+        </div>
+        <div class="col-md-8 right-col" >
+          <%= yield %>
+        </div>
+      <% else %>
+          <%= yield %>
+      <% end %>
+    </div>
+  </body>
+</html>
+
+    
+    
+   

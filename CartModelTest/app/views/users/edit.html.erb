@@ -1,0 +1,26 @@
+ <h1>UPDATE PROFILE</h1>
+ <%= simple_form_for @user, :html => { :multipart => true } do |f| %>
+ 	<div>
+    <% str = @user.image.url(:small) %>
+ 		<%= image_tag str, class: "mini-picture" %>
+ 		<%= f.input :image, label: "Want to change your image?" %>
+ 		<h2>Hello, <%= @user.name %></h2>
+ 	</div>
+  <div>
+  	<label>Your Name:</label>
+    <%= f.text_field :name, class: "form-control", placeholder: "name", required: "" %>
+  </div>
+  <div>
+  	<label>Your Username:</label>
+  	<%= f.text_field :user_name, class: "form-control", placeholder: "user_name", required: "" %>
+  </div>
+  <div>
+  	<label>Your Password:</label>
+  	<%= f.password_field :password, class: "form-control", placeholder: "password", required: "" %>
+  </div>
+  <div>
+  	<label>Your Password_confirmation:</label>
+  	<%= f.password_field :Password_confirmation, class: "form-control", placeholder: "password_confirmation", required: "" %>
+  </div>
+    <%= f.submit "UPDATE", class: "btn btn-default submit" %>
+ <% end %>

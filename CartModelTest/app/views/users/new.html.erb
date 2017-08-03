@@ -1,0 +1,61 @@
+
+<div class="">
+	<% if @user.errors.any? %>
+		<ul>
+			<% @user.errors.full_messages.each do |error| %>
+				<li><%= error %></li>
+			<% end %>
+		</ul>
+	<% end %>
+  <a class="hiddenanchor" id="toregister"></a>
+  <a class="hiddenanchor" id="tologin"></a>
+  <div id="wrapper">
+    <div id="register" class="animate form">
+      <section class="login_content">
+        <%= simple_form_for @user, method: :post, url: users_path do |f| %>
+          <h1>Create Account</h1>
+          <div>
+            <%= f.email_field :email, class: "form-control", placeholder: "Email", required: "" %>
+          </div>
+          <div>
+            <%= f.password_field :password, class: "form-control", placeholder: "Password", required: "" %>
+          </div>
+          <div>
+            <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Password Confirmation", required: "" %>
+          </div>
+          <div>
+            <%= f.text_field :user_name, class: "form-control", placeholder: "Username" %>
+          </div>
+          <div>
+            <%= f.text_field :name, class: "form-control", placeholder: "Fullname" %>
+          </div>
+          <div>
+            <%= f.file_field :image, class: "form-control" %>
+          </div>
+          <div>
+            <%= f.submit "Sign Up", class: "btn btn-default submit" %>
+          </div>
+          <div class="clearfix"></div>
+          <div class="separator">
+
+            <p class="change_link">Already a member ?
+            	<%= link_to "Log in" ,login_path %>
+            </p>
+            <div class="clearfix"></div>
+            <br />
+            <div>
+              <h1> Book Ordering!</h1>
+              <p>©2017 All Rights Reserved. Book Booking! is a Bootstrap 3 template. Privacy and Terms</p>
+            </div>
+          </div>
+        <% end %>
+        <!-- form -->
+      </section>
+      <!-- content -->
+    </div>
+  </div>
+</div>
+
+
+
+
